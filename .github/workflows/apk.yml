@@ -22,8 +22,8 @@ jobs:
       - name: Preparar entorno Android (Java)
         uses: actions/setup-java@v3
         with:
-          distribution: 'zulu'
-          java-version: '17'
+          distribution: "zulu"
+          java-version: "17"
 
       - name: Generar el APK
         working-directory: android
