@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">ControlPanaderia</string>
+    <string name="title_activity_main">ControlPanaderia</string>
+    <string name="package_name">com.xandzik.panapp</string>
+    <string name="custom_url_scheme">com.xandzik.panapp</string>
+</resources>

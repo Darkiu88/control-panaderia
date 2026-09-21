@@ -1,0 +1,8 @@
+{
+  "appId": "com.xandzik.panapp",
+  "appName": "ControlPanaderia",
+  "webDir": "dist",
+  "server": {
+    "cleartext": true
+  }
+}

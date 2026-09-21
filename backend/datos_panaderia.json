@@ -1,0 +1,21 @@
+{
+    "fecha_sincronizacion": "21/9/2026, 8:47:53 a.m.",
+    "ventasDelDia": {
+        "totalDinero": 176,
+        "piezas": {
+            "Concha": 22
+        }
+    },
+    "inventarioActual": {
+        "Concha": 6
+    },
+    "encargosPendientes": [],
+    "historial": [],
+    "catalogo": {
+        "Concha": 8,
+        "Quesadilla": 8,
+        "Elote": 8,
+        "Cuernito": 8,
+        "Bisquet": 8
+    }
+}

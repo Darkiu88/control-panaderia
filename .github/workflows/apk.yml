@@ -1,0 +1,38 @@
+name: Compilar APK Android
+on: [workflow_dispatch]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Descargar código
+        uses: actions/checkout@v3
+
+      - name: Preparar Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      - name: Instalar dependencias web y compilar
+        run: |
+          npm install
+          npm run build
+          node node_modules/@capacitor/cli/bin/capacitor sync android
+
+      - name: Preparar entorno Android (Java)
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'zulu'
+          java-version: '17'
+
+      - name: Generar el APK
+        working-directory: android
+        run: |
+          chmod +x gradlew
+          ./gradlew assembleDebug
+
+      - name: Entregar archivo APK
+        uses: actions/upload-artifact@v3
+        with:
+          name: ControlPanaderia-APK
+          path: android/app/build/outputs/apk/debug/app-debug.apk
