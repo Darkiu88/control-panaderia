@@ -13,11 +13,10 @@ jobs:
         with:
           node-version: 18
 
-      - name: Instalar dependencias web y compilar
+      - name: Instalar dependencias y compilar web
         run: |
           npm install
           npm run build
-          node node_modules/@capacitor/cli/bin/capacitor sync android
 
       - name: Preparar entorno Android (Java)
         uses: actions/setup-java@v4
